@@ -1,0 +1,80 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails Devis</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/styleDetailDevis.css}" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="container">
+<p class="text-center">Prenom : <span class="span-text" th:text="${devis.prenom}"></span></p>
+<p class="text-center">Nom : <span class="span-text" th:text="${devis.nom}"></span></p>
+<p class="text-center">Email : <span class="span-text" th:text="${devis.email}"></span></p>
+<br/>
+
+<table class="table table-success table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Qualitée presta. mur(s)</th>
+        <th scope="col">Prix M2 presta. mur(s)</th>
+        <th scope="col">Surface mur(s)</th>
+        <th scope="col">Prix total presta. mur(s)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td  th:text="${devis.qualitePrestationMurs}"/>
+        <td th:text="${devis.prixMetreCarrePrestationMurs} + ' €'"/>
+        <td th:text="${devis.surfaceMurs}"/>
+        <td th:text="${devis.prixTotalPrestationMurs} + ' €'"/>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<table class="table table-success table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Qualitée presta. plafond(s)</th>
+        <th scope="col">Prix M2 presta. plafond(s)</th>
+        <th scope="col">Surface plafond(s)</th>
+        <th scope="col">Prix total presta. plafond(s)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td  th:text="${devis.qualitePrestationPlafonds}"/>
+        <td th:text="${devis.prixMetreCarrePrestationPlafonds} + ' €'"/>
+        <td th:text="${devis.surfacePlafonds}"/>
+        <td th:text="${devis.prixTotalPrestationPlafonds} + ' €'"/>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<table class="table table-success table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Qualitée presta. boiserie(s)</th>
+        <th scope="col">Prix M2 presta. boiserie(s)</th>
+        <th scope="col">Surface boiserie(s)</th>
+        <th scope="col">Prix total presta. boiserie(s)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td  th:text="${devis.qualitePrestationBoiseries}"/>
+        <td th:text="${devis.prixMetreCarrePrestationBoiseries} + ' €'"/>
+        <td th:text="${devis.surfaceBoiseries}"/>
+        <td th:text="${devis.prixTotalPrestationBoiseries} + ' €'"/>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<p class="text-center">Prix total du devis : <span th:text="${devis.prixTotalDevis}"></span> €</p>
+</div>
+</body>
+</html>

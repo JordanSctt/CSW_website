@@ -1,0 +1,23 @@
+
+body {
+    margin-bottom: 10px;
+    background-color: #A9A9A9; 
+}
+
+.container {
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.text-center {
+    font-size: 2em;
+    font-style: bold;
+}
+
+.span-text {
+    font-size: 1em;
+    font-style: italic;
+}

@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page admin</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/listDevis.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="container1">    
+
+    <p class="text-center">Liste de l'ensemble des estimations de devis passé sur l'application CSW peinture</p>
+
+<table class="table table-success table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Qualitée presta. mur(s)</th>
+        <th scope="col">Prix M2 presta. mur(s)</th>
+        <th scope="col">Surface mur(s)</th>
+        <th scope="col">Prix total presta. mur(s)</th>
+        <th scope="col">Qualitée presta. plafond(s)</th>
+        <th scope="col">Prix M2 presta. plafond(s)</th>
+        <th scope="col">Surface plafond(s)</th>
+        <th scope="col">Prix total presta. plafond(s)</th>
+        <th scope="col">Qualitée presta. boiserie(s)</th>
+        <th scope="col">Prix M2 presta. boiserie(s)</th>
+        <th scope="col">Surface boiserie(s)</th>
+        <th scope="col">Prix total presta. boiserie(s)</th>
+        <th scope="col">Prix total du devis</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="devis: ${allDevis}">
+        <td th:text="${devis.qualitePrestationMurs}"/>
+        <td th:text="${devis.prixMetreCarrePrestationMurs} + ' €'"/>
+        <td th:text="${devis.surfaceMurs}"/>
+        <td th:text="${devis.prixTotalPrestationMurs} + ' €'"/>
+        <td th:text="${devis.qualitePrestationPlafonds}"/>
+        <td th:text="${devis.prixMetreCarrePrestationPlafonds} + ' €'"/>
+        <td th:text="${devis.surfacePlafonds}"/>
+        <td th:text="${devis.prixTotalPrestationPlafonds} + ' €'"/>
+        <td th:text="${devis.qualitePrestationBoiseries}"/>
+        <td th:text="${devis.prixMetreCarrePrestationBoiseries} + ' €'"/>
+        <td th:text="${devis.surfaceBoiseries}"/>
+        <td th:text="${devis.prixTotalPrestationBoiseries} + ' €'"/>
+        <td th:text="${devis.prixTotalDevis} + ' €'"/>
+    </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>
