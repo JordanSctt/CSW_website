@@ -17,6 +17,10 @@
 <table class="table table-success table-striped">
     <thead>
     <tr>
+        <th scope="col">Prénom</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Email</th>
+
         <th scope="col">Qualitée presta. mur(s)</th>
         <th scope="col">Prix M2 presta. mur(s)</th>
         <th scope="col">Surface mur(s)</th>
@@ -30,10 +34,15 @@
         <th scope="col">Surface boiserie(s)</th>
         <th scope="col">Prix total presta. boiserie(s)</th>
         <th scope="col">Prix total du devis</th>
+        <th scope="col">Action</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="devis: ${allDevis}">
+        <td th:text="${devis.prenom}"/>
+        <td th:text="${devis.nom}"/>
+        <td th:text="${devis.email}"/>
+
         <td th:text="${devis.qualitePrestationMurs}"/>
         <td th:text="${devis.prixMetreCarrePrestationMurs} + ' €'"/>
         <td th:text="${devis.surfaceMurs}"/>
@@ -47,9 +56,13 @@
         <td th:text="${devis.surfaceBoiseries}"/>
         <td th:text="${devis.prixTotalPrestationBoiseries} + ' €'"/>
         <td th:text="${devis.prixTotalDevis} + ' €'"/>
+        <td><a th:href="'/devis/admin/delete?id=' + ${devis.id}">supprimer</a></td>
     </tr>
     </tbody>
 </table>
+    <form th:action="@{/logout}" method="get">
+        <button class="btn btn-outline-warning me-2" type="Submit">Déconnection</button>
+    </form>
 </div>
 </body>
 </html>
