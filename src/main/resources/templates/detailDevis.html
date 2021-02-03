@@ -75,6 +75,9 @@
 </table>
 <br/>
 <p class="text-center">Prix total du devis : <span th:text="${devis.prixTotalDevis}"></span> €</p>
+    <br/>
+    <a th:href="'/devis/export?id=' + ${devis.id}" class="button">Exporter en PDF</a>
+    <br/>
     <a href="/accueil" class="button">Retour accueil</a>
 </div>
 </body>

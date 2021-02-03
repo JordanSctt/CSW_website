@@ -41,6 +41,8 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .antMatchers("/devis/post/new")
                 .permitAll()
+                .antMatchers("/devis/export")
+                .permitAll()
                 .antMatchers("/admin/login")
                 .permitAll()
                 .and()
