@@ -325,7 +325,7 @@
 	{
 		overflow: hidden;
 		padding: 5em 0em;
-		background: #455655 /*url(images/header.jpg) no-repeat center*/ ;
+		background: /*url(images/header.jpg) no-repeat center*/ ;
 		background-size: cover;
 	}
 
@@ -391,17 +391,17 @@
 	#menu li a, #menu li span
 	{
 		display: inline-block;
-		margin-left: 0.50em;
+		margin-left: 0px;
 		padding: 1em 1.5em;
 		letter-spacing: 0.20em;
 		text-decoration: none;
-		font-size: 0.90em;
+		font-size: 1.1em;
 		font-weight: 600;
 		text-transform: uppercase;
 		outline: 0;
 		color: #FFF;
 	}
-	
+
 	#menu li:hover a, #menu li.active a, #menu li.active span
 	{
 	}

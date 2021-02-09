@@ -56,7 +56,8 @@
         <td th:text="${devis.surfaceBoiseries}"/>
         <td th:text="${devis.prixTotalPrestationBoiseries} + ' €'"/>
         <td th:text="${devis.prixTotalDevis} + ' €'"/>
-        <td><a th:href="'/devis/admin/delete?id=' + ${devis.id}">supprimer</a></td>
+        <td><a th:href="'/devis/admin/delete?id=' + ${devis.id}" class="btn btn-warning">supprimer</a>
+            <a th:href="'/devis/export?id=' + ${devis.id}" class="btn btn-primary">Exporter en PDF</a></td>
     </tr>
     </tbody>
 </table>

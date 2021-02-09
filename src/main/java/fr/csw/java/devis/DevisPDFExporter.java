@@ -103,7 +103,7 @@ public class DevisPDFExporter {
         fontTitle.setColor(Color.BLACK);
         fontTitle.setSize(20);
         Paragraph title = new Paragraph("Détail de votre estimation de devis sur le site CSW Peinture", fontTitle);
-        title.setSpacingAfter(30);
+        title.setSpacingAfter(20);
         title.setAlignment(1);
         document.add(title);
 
@@ -129,6 +129,31 @@ public class DevisPDFExporter {
         Paragraph emailInfo = new Paragraph("Email: " + devis.get().getEmail(), fontInfo);
         emailInfo.setSpacingAfter(5);
         document.add(emailInfo);
+
+        Font fontInfoCsw = FontFactory.getFont(FontFactory.HELVETICA_BOLD);
+        fontInfoCsw.setColor(Color.BLACK);
+        fontInfoCsw.setSize(10);
+        fontInfoCsw.setStyle(2);
+        Paragraph prenomNomInfo = new Paragraph("Samuel-Weis Colin ", fontInfoCsw);
+        prenomNomInfo.setSpacingAfter(5);
+        prenomNomInfo.setAlignment(2);
+        document.add(prenomNomInfo);
+        Paragraph roleInfo = new Paragraph("Peintre applicateur de revêtement", fontInfoCsw);
+        roleInfo.setSpacingAfter(5);
+        roleInfo.setAlignment(2);
+        document.add(roleInfo);
+        Paragraph emailCswInfo = new Paragraph("colinsw@hotmail.fr", fontInfoCsw);
+        emailCswInfo.setSpacingAfter(5);
+        emailCswInfo.setAlignment(2);
+        document.add(emailCswInfo);
+        Paragraph telCswInfo = new Paragraph("06 14 26 31 83", fontInfoCsw);
+        telCswInfo.setSpacingAfter(5);
+        telCswInfo.setAlignment(2);
+        document.add(telCswInfo);
+        Paragraph adresseCswInfo = new Paragraph("Rue St Eloi 13480 Cabries", fontInfoCsw);
+        adresseCswInfo.setSpacingAfter(5);
+        adresseCswInfo.setAlignment(2);
+        document.add(adresseCswInfo);
 
         Paragraph secTitleMurs = new Paragraph("Détail prestation mur(s):", fontSecTitle);
         secTitleMurs.setSpacingBefore(15);

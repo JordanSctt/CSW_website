@@ -32,13 +32,13 @@ public class DevisController {
         return new ModelAndView("accueil");
     }
 
-    @GetMapping("/devis/get/new")
+    @GetMapping("/devis/new")
     public ModelAndView displayFormNewDevis() {
         ModelAndView modelAndView = new ModelAndView("devis");
         return modelAndView;
     }
 
-    @PostMapping("/devis/post/new")
+    @PostMapping("/devis/new")
     public ModelAndView newDevis(@ModelAttribute("request") Devis request) {
         Devis newDevis = devisService.save(request);
         System.out.println(newDevis.toString());

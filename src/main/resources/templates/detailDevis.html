@@ -74,11 +74,13 @@
     </tbody>
 </table>
 <br/>
-<p class="text-center">Prix total du devis : <span th:text="${devis.prixTotalDevis}"></span> €</p>
+<p class="text-center">Prix total de l'estimation de devis : <span th:text="${devis.prixTotalDevis}"></span> €</p>
     <br/>
-    <a th:href="'/devis/export?id=' + ${devis.id}" class="button">Exporter en PDF</a>
+    <a th:href="'/devis/export?id=' + ${devis.id}" class="btn btn-success">Exporter en PDF</a>
     <br/>
-    <a href="/accueil" class="button">Retour accueil</a>
+    <br/>
+    <br/>
+    <a href="/accueil" class="btn btn-primary">Retour accueil</a>
 </div>
 </body>
 </html>
