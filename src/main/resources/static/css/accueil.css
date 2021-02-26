@@ -157,4 +157,56 @@ section div:nth-child(2) h2 {
 }
 
 
+.imgBox2 {
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
+}
+
+/* slider */
+/*
+#slider {
+    overflow: hidden;
+}
+
+#slider figure {
+    
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    
+    animation: 20s slider infinite;
+}
+
+@keyframes slider {
+    0%{
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+*/
 /* vert foncé: #455655 / vert clair:  #8DCB89 : vert tres clair: a1d8b1 */

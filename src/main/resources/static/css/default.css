@@ -269,12 +269,13 @@
 		font-weight: 400;
 		font-size: 1.2em;
 		color: #FFF;
+		
 	}
 	
 	.button:before
 	{
 		display: inline-block;
-		background: #8DCB89;
+		background: #a1d8b1;
 		margin-right: 1em;
 		width: 40px;
 		height: 40px;
@@ -282,6 +283,13 @@
 		border-radius: 20px;
 		text-align: center;
 		color: #272925;
+	}
+
+	.button:hover:before 
+	{
+		transition: transform 0.5s;
+		transform-origin: bottom right;
+		transform: scale(1);
 	}
 	
 	.button-small
@@ -439,7 +447,9 @@
 	#wrapper3
 	{
 		overflow: hidden;
-		padding: 8em 0em;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		/*padding: 8em 0em;*/
 		background: #FFF;
 	}
 	

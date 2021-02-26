@@ -16,6 +16,10 @@ public class Devis {
     private String email;
 
     //------------------PRESTA MURS--------------------------
+    private boolean detapissage;
+    private int prixMetreCarreDetapissage;
+    private int prixTotalDetapissage;
+    private int surfaceDetapissageMurs;
     @Enumerated(EnumType.STRING)
     private QualitePrestationMurs qualitePrestationMurs;
     private int prixMetreCarrePrestationMurs;
@@ -73,6 +77,38 @@ public class Devis {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public boolean isDetapissage() {
+        return detapissage;
+    }
+
+    public void setDetapissage(boolean détapissage) {
+        this.detapissage = détapissage;
+    }
+
+    public int getPrixMetreCarreDetapissage() {
+        return prixMetreCarreDetapissage;
+    }
+
+    public void setPrixMetreCarreDetapissage(int prixMetreCarreDetapissage) {
+        this.prixMetreCarreDetapissage = prixMetreCarreDetapissage;
+    }
+
+    public int getPrixTotalDetapissage() {
+        return prixTotalDetapissage;
+    }
+
+    public void setPrixTotalDetapissage(int prixTotalDetapissage) {
+        this.prixTotalDetapissage = prixTotalDetapissage;
+    }
+
+    public int getSurfaceDetapissageMurs() {
+        return surfaceDetapissageMurs;
+    }
+
+    public void setSurfaceDetapissageMurs(int surfaceDetapissageMurs) {
+        this.surfaceDetapissageMurs = surfaceDetapissageMurs;
     }
 
     public QualitePrestationMurs getQualitePrestationMurs() {
@@ -186,6 +222,10 @@ public class Devis {
                 ", prenom='" + prenom + '\'' +
                 ", nom='" + nom + '\'' +
                 ", email='" + email + '\'' +
+                ", detapissage=" + detapissage +
+                ", prixMetreCarreDetapissage=" + prixMetreCarreDetapissage +
+                ", prixTotalDetapissage=" + prixTotalDetapissage +
+                ", surfaceDetapissageMurs=" + surfaceDetapissageMurs +
                 ", qualitePrestationMurs=" + qualitePrestationMurs +
                 ", prixMetreCarrePrestationMurs=" + prixMetreCarrePrestationMurs +
                 ", surfaceMurs=" + surfaceMurs +

@@ -19,7 +19,29 @@ public class DevisPDFExporter {
         this.devis = devis;
     }
 
+    //---------------TABLE MURS-----------------------
+    private void writeTableHeaderDetapissageMurs(PdfPTable table) {
+        PdfPCell cell = new PdfPCell();
 
+        cell.setBackgroundColor(Color.LIGHT_GRAY);
+        cell.setPadding(5);
+        Font fontHeaderTable = FontFactory.getFont(FontFactory.HELVETICA);
+
+        cell.setPhrase(new Phrase("Détapissage mur(s)", fontHeaderTable));
+        table.addCell(cell);
+        cell.setPhrase(new Phrase("Prix M2 détapissage mur(s)", fontHeaderTable));
+        table.addCell(cell);
+        cell.setPhrase(new Phrase("Surface détapissage mur(s)", fontHeaderTable));
+        table.addCell(cell);
+        cell.setPhrase(new Phrase("Prix total détapissage mur(s)", fontHeaderTable));
+        table.addCell(cell);
+    }
+    private void writeTableDataDetapissageMurs(PdfPTable table) {
+        table.addCell(String.valueOf(devis.get().isDetapissage()));
+        table.addCell(String.valueOf(devis.get().getPrixMetreCarreDetapissage()) + " €");
+        table.addCell(String.valueOf(devis.get().getSurfaceDetapissageMurs()) + " m2");
+        table.addCell(String.valueOf(devis.get().getPrixTotalDetapissage()) + " €");
+    }
     //---------------TABLE MURS-----------------------
     private void writeTableHeaderMurs(PdfPTable table) {
         PdfPCell cell = new PdfPCell();
@@ -154,6 +176,20 @@ public class DevisPDFExporter {
         adresseCswInfo.setSpacingAfter(5);
         adresseCswInfo.setAlignment(2);
         document.add(adresseCswInfo);
+
+        Paragraph secTitleDetapissage = new Paragraph("Détail détapissage mur(s):", fontSecTitle);
+        secTitleDetapissage.setSpacingBefore(15);
+        secTitleDetapissage.setSpacingAfter(5);
+        secTitleDetapissage.setAlignment(1);
+        document.add(secTitleDetapissage);
+
+        PdfPTable tableDetapissageMurs = new PdfPTable(4);
+        tableDetapissageMurs.setWidthPercentage(100);
+        tableDetapissageMurs.setSpacingBefore(5);
+        tableDetapissageMurs.setWidths(new float[] {4f, 1.5f, 1.5f, 1.5f});
+        writeTableHeaderDetapissageMurs(tableDetapissageMurs);
+        writeTableDataDetapissageMurs(tableDetapissageMurs);
+        document.add(tableDetapissageMurs);
 
         Paragraph secTitleMurs = new Paragraph("Détail prestation mur(s):", fontSecTitle);
         secTitleMurs.setSpacingBefore(15);

@@ -20,6 +20,25 @@
 <table class="table table-success table-striped">
     <thead>
     <tr>
+        <th scope="col">Détapissage mur(s)</th>
+        <th scope="col">Prix M2 détapissage mur(s)</th>
+        <th scope="col">Surface détapissage mur(s)</th>
+        <th scope="col">Prix total détapissage mur(s)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td  th:text="${devis.detapissage}"/>
+        <td  th:text="${devis.prixMetreCarreDetapissage} + ' €'"/>
+        <td th:text="${devis.surfaceDetapissageMurs}"/>
+        <td th:text="${devis.prixTotalDetapissage} + ' €'"/>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<table class="table table-success table-striped">
+    <thead>
+    <tr>
         <th scope="col">Qualitée presta. mur(s)</th>
         <th scope="col">Prix M2 presta. mur(s)</th>
         <th scope="col">Surface mur(s)</th>

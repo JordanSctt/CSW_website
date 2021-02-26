@@ -16,7 +16,7 @@
 <body>
 <form class="form-signin" name="request" action="/devis/new" method="post">
 
-    <h1 class="h1 mb-1 font-weight-normal">Créer votre devis</h1>
+    <h1 class="h1 mb-1 font-weight-normal">Créer votre estimation de devis</h1>
 
     <h3 class="h3 mb-3 font-weight-normal">Informations personnel :</h3>
 
@@ -36,6 +36,15 @@
     <!-- MURS -->
     <h2 class="h3 mb-3 font-weight-normal">- Prestation murs -</h2>
 
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="detapissage" type="checkbox" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Détapissage des murs nécessaire</label>
+    </div>
+      <label for="inputSurfaceDetapissageMurs">Surface de murs à détapisser en mètre carré :</label>
+    <div class="form-label-group">
+        <input type="number" id="inputSurfaceDetapissageMurs" class="form-control" name="surfaceDetapissageMurs" value="0"/>
+    </div>
+    </br>
     <div class="form-label-group">
         <select class="form-select" aria-label="Default select example" name="qualitePrestationMurs" >
             <option selected value="PEINTURE_DE_PROPRETE">Sélectionner une qualitée de prestation pour vos murs</option>
@@ -74,8 +83,8 @@
         <select class="form-select" aria-label="Default select example" name="qualitePrestationBoiseries" >
             <option selected value="PEINTURE_DE_PROPRETE">Sélectionner une qualitée de prestation pour vos boiseries</option>
             <option value="PEINTURE_DE_PROPRETE">Simple peinture de propreté en une couche d'application</option>
-            <option value="PONCAGE_ET_PEINTURE_DE_PROPRETE">Ponçage du support et peinture en une couche d'application</option>
-            <option value="PONCAGE_ET_MISE_EN_PEINTURE">Ponçage du support et peinture en deux couche d'application</option>
+            <option value="PONCAGE_ET_PEINTURE_DE_PROPRETE">Ponçage du support, reprise(s) sintobois et peinture en une couche d'application</option>
+            <option value="PONCAGE_ET_MISE_EN_PEINTURE">Ponçage du support, reprise(s) sintobois et peinture en deux couche d'application</option>
         </select>
     </div>
     <label for="inputSurfaceBoiseries">Surface de boiseries en mètre carré :</label>

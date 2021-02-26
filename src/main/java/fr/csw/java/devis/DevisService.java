@@ -31,7 +31,14 @@ public class DevisService {
             newDevis.setPrixMetreCarrePrestationMurs(16);
         }
         newDevis.setSurfaceMurs(devisRequest.getSurfaceMurs());
-        newDevis.setPrixTotalPrestationMurs(newDevis.getPrixMetreCarrePrestationMurs() * newDevis.getSurfaceMurs());
+
+        newDevis.setDetapissage(devisRequest.isDetapissage());
+        newDevis.setSurfaceDetapissageMurs(devisRequest.getSurfaceDetapissageMurs());
+        if (devisRequest.isDetapissage()) {
+            newDevis.setPrixMetreCarreDetapissage(4);
+            newDevis.setPrixTotalDetapissage(newDevis.getPrixMetreCarreDetapissage() * newDevis.getSurfaceDetapissageMurs());
+        }
+        newDevis.setPrixTotalPrestationMurs((newDevis.getPrixMetreCarrePrestationMurs() * newDevis.getSurfaceMurs()));
 
         //------------------PRESTA PLAFONDS----------------------
         newDevis.setQualitePrestationPlafonds(devisRequest.getQualitePrestationPlafonds());
@@ -65,55 +72,10 @@ public class DevisService {
         newDevis.setPrixTotalPrestationBoiseries(newDevis.getPrixMetreCarrePrestationBoiseries() * newDevis.getSurfaceBoiseries());
 
         //------------------PRIX TOTAL DEVIS--------------------
-        newDevis.setPrixTotalDevis(newDevis.getPrixTotalPrestationMurs() + newDevis.getPrixTotalPrestationPlafonds() + newDevis.getPrixTotalPrestationBoiseries());
+        newDevis.setPrixTotalDevis(newDevis.getPrixTotalDetapissage() + newDevis.getPrixTotalPrestationMurs() + newDevis.getPrixTotalPrestationPlafonds() + newDevis.getPrixTotalPrestationBoiseries());
         devisRepository.save(newDevis);
         return newDevis;
     }
-
-
-
-    /*
-    public Devis save(Devis devis) {
-        Devis newDevis = new Devis();
-        newDevis.setPrenom(devis.getPrenom());
-        newDevis.setNom(devis.getNom());
-        newDevis.setEmail(devis.getEmail());
-        newDevis.setPrestation(devis.getPrestation());
-        newDevis.setQualitePrestation(devis.getQualitePrestation());
-        //----------------------MURS------------------------------
-        if (devis.getPrestation() == Prestation.MUR && devis.getQualitePrestation() == QualitePrestationMurs.PEINTURE_DE_PROPRETE) {
-            newDevis.setPrixMetreCarrePrestation(8);
-        }
-        if (devis.getPrestation() == Prestation.MUR && devis.getQualitePrestation() == QualitePrestationMurs.MISE_EN_PEINTURE) {
-            newDevis.setPrixMetreCarrePrestation(11);
-        }
-        if (devis.getPrestation() == Prestation.MUR && devis.getQualitePrestation() == QualitePrestationMurs.REPRISE_ET_MISE_EN_PEINTURE) {
-            newDevis.setPrixMetreCarrePrestation(12);
-        }
-        if (devis.getPrestation() == Prestation.MUR && devis.getQualitePrestation() == QualitePrestationMurs.ENDUISAGE_ET_MISE_EN_PEINTURE) {
-            newDevis.setPrixMetreCarrePrestation(16);
-        }
-        //----------------------PLAFONDS--------------------------
-        if (devis.getPrestation() == Prestation.PLAFOND && devis.getQualitePrestation() == QualitePrestationMurs.PEINTURE_DE_PROPRETE) {
-            newDevis.setPrixMetreCarrePrestation(9);
-        }
-        if (devis.getPrestation() == Prestation.PLAFOND && devis.getQualitePrestation() == QualitePrestationMurs.MISE_EN_PEINTURE) {
-            newDevis.setPrixMetreCarrePrestation(12);
-        }
-        if (devis.getPrestation() == Prestation.PLAFOND && devis.getQualitePrestation() == QualitePrestationMurs.REPRISE_ET_MISE_EN_PEINTURE) {
-            newDevis.setPrixMetreCarrePrestation(13);
-        }
-        if (devis.getPrestation() == Prestation.PLAFOND && devis.getQualitePrestation() == QualitePrestationMurs.ENDUISAGE_ET_MISE_EN_PEINTURE) {
-            newDevis.setPrixMetreCarrePrestation(17);
-        }
-
-        newDevis.setSurface(devis.getSurface());
-        newDevis.setPrixTotalPrestation(newDevis.getPrixMetreCarrePrestation() * newDevis.getSurface());
-        newDevis.setPrixTotalDevis(newDevis.getPrixTotalPrestation());
-        devisRepository.save(newDevis);
-        return devis;
-    }
-     */
 
 
 }
