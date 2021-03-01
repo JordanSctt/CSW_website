@@ -28,9 +28,9 @@
     </thead>
     <tbody>
     <tr>
-        <td  th:text="${devis.detapissage}"/>
+        <td  th:text="${devis.valueOfisDetapissage}"/>
         <td  th:text="${devis.prixMetreCarreDetapissage} + ' €'"/>
-        <td th:text="${devis.surfaceDetapissageMurs}"/>
+        <td th:text="${devis.surfaceDetapissageMurs} + ' m²'"/>
         <td th:text="${devis.prixTotalDetapissage} + ' €'"/>
     </tr>
     </tbody>
@@ -47,9 +47,9 @@
     </thead>
     <tbody>
     <tr>
-        <td  th:text="${devis.qualitePrestationMurs}"/>
+        <td  th:text="${devis.qualitePrestationMurs.labelQualiteMurs}"/>
         <td th:text="${devis.prixMetreCarrePrestationMurs} + ' €'"/>
-        <td th:text="${devis.surfaceMurs}"/>
+        <td th:text="${devis.surfaceMurs} + ' m²'"/>
         <td th:text="${devis.prixTotalPrestationMurs} + ' €'"/>
     </tr>
     </tbody>
@@ -66,9 +66,9 @@
     </thead>
     <tbody>
     <tr>
-        <td  th:text="${devis.qualitePrestationPlafonds}"/>
+        <td  th:text="${devis.qualitePrestationPlafonds.labelQualitePlafonds}"/>
         <td th:text="${devis.prixMetreCarrePrestationPlafonds} + ' €'"/>
-        <td th:text="${devis.surfacePlafonds}"/>
+        <td th:text="${devis.surfacePlafonds} + ' m²'"/>
         <td th:text="${devis.prixTotalPrestationPlafonds} + ' €'"/>
     </tr>
     </tbody>
@@ -85,9 +85,9 @@
     </thead>
     <tbody>
     <tr>
-        <td  th:text="${devis.qualitePrestationBoiseries}"/>
+        <td  th:text="${devis.qualitePrestationBoiseries.labelQualiteBois}"/>
         <td th:text="${devis.prixMetreCarrePrestationBoiseries} + ' €'"/>
-        <td th:text="${devis.surfaceBoiseries}"/>
+        <td th:text="${devis.surfaceBoiseries} + ' m²'"/>
         <td th:text="${devis.prixTotalPrestationBoiseries} + ' €'"/>
     </tr>
     </tbody>

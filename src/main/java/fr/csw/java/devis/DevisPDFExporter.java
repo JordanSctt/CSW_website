@@ -37,7 +37,7 @@ public class DevisPDFExporter {
         table.addCell(cell);
     }
     private void writeTableDataDetapissageMurs(PdfPTable table) {
-        table.addCell(String.valueOf(devis.get().isDetapissage()));
+        table.addCell(String.valueOf(devis.get().valueOfisDetapissage()));
         table.addCell(String.valueOf(devis.get().getPrixMetreCarreDetapissage()) + " €");
         table.addCell(String.valueOf(devis.get().getSurfaceDetapissageMurs()) + " m2");
         table.addCell(String.valueOf(devis.get().getPrixTotalDetapissage()) + " €");
@@ -60,7 +60,7 @@ public class DevisPDFExporter {
         table.addCell(cell);
     }
     private void writeTableDataMurs(PdfPTable table) {
-        table.addCell(devis.get().getQualitePrestationMurs().toString());
+        table.addCell(devis.get().getQualitePrestationMurs().labelQualiteMurs());
         table.addCell(String.valueOf(devis.get().getPrixMetreCarrePrestationMurs()) + " €");
         table.addCell(String.valueOf(devis.get().getSurfaceMurs()) + " m2");
         table.addCell(String.valueOf(devis.get().getPrixTotalPrestationMurs()) + " €");
@@ -84,7 +84,7 @@ public class DevisPDFExporter {
         table.addCell(cell);
     }
     private void writeTableDataPlafonds(PdfPTable table) {
-        table.addCell(devis.get().getQualitePrestationPlafonds().toString());
+        table.addCell(devis.get().getQualitePrestationPlafonds().labelQualitePlafonds());
         table.addCell(String.valueOf(devis.get().getPrixMetreCarrePrestationPlafonds()) + " €");
         table.addCell(String.valueOf(devis.get().getSurfacePlafonds()) + " m2");
         table.addCell(String.valueOf(devis.get().getPrixTotalPrestationPlafonds()) + " €");
@@ -108,7 +108,7 @@ public class DevisPDFExporter {
         table.addCell(cell);
     }
     private void writeTableDataBoiseries(PdfPTable table) {
-        table.addCell(devis.get().getQualitePrestationBoiseries().toString());
+        table.addCell(devis.get().getQualitePrestationBoiseries().labelQualiteBois());
         table.addCell(String.valueOf(devis.get().getPrixMetreCarrePrestationBoiseries()) + " €");
         table.addCell(String.valueOf(devis.get().getSurfaceBoiseries()) + " m2");
         table.addCell(String.valueOf(devis.get().getPrixTotalPrestationBoiseries()) + " €");

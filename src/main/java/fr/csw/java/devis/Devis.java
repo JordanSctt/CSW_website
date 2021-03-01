@@ -83,6 +83,14 @@ public class Devis {
         return detapissage;
     }
 
+    public String valueOfisDetapissage() {
+        if (detapissage) {
+            return "Détapissage choisi";
+        } else {
+            return "Détapissage non choisi";
+        }
+    }
+
     public void setDetapissage(boolean détapissage) {
         this.detapissage = détapissage;
     }

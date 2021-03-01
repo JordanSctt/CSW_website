@@ -21,16 +21,20 @@
         <th scope="col">Nom</th>
         <th scope="col">Email</th>
 
+        <th scope="col">Choix détapissage</th>
+        <th scope="col">Prix M² détapissage mur(s)</th>
+        <th scope="col">Surface détapissage mur(s)</th>
+        <th scope="col">Prix total presta. détapissage</th>
         <th scope="col">Qualitée presta. mur(s)</th>
-        <th scope="col">Prix M2 presta. mur(s)</th>
+        <th scope="col">Prix M² presta. mur(s)</th>
         <th scope="col">Surface mur(s)</th>
         <th scope="col">Prix total presta. mur(s)</th>
         <th scope="col">Qualitée presta. plafond(s)</th>
-        <th scope="col">Prix M2 presta. plafond(s)</th>
+        <th scope="col">Prix M² presta. plafond(s)</th>
         <th scope="col">Surface plafond(s)</th>
         <th scope="col">Prix total presta. plafond(s)</th>
         <th scope="col">Qualitée presta. boiserie(s)</th>
-        <th scope="col">Prix M2 presta. boiserie(s)</th>
+        <th scope="col">Prix M² presta. boiserie(s)</th>
         <th scope="col">Surface boiserie(s)</th>
         <th scope="col">Prix total presta. boiserie(s)</th>
         <th scope="col">Prix total du devis</th>
@@ -43,15 +47,19 @@
         <td th:text="${devis.nom}"/>
         <td th:text="${devis.email}"/>
 
-        <td th:text="${devis.qualitePrestationMurs}"/>
+        <td th:text="${devis.valueOfisDetapissage}"/>
+        <td th:text="${devis.prixMetreCarreDetapissage}"/>
+        <td th:text="${devis.surfaceDetapissageMurs}"/>
+        <td th:text="${devis.prixTotalDetapissage}"/>
+        <td th:text="${devis.qualitePrestationMurs.labelQualiteMurs}"/>
         <td th:text="${devis.prixMetreCarrePrestationMurs} + ' €'"/>
         <td th:text="${devis.surfaceMurs}"/>
         <td th:text="${devis.prixTotalPrestationMurs} + ' €'"/>
-        <td th:text="${devis.qualitePrestationPlafonds}"/>
+        <td th:text="${devis.qualitePrestationPlafonds.labelQualitePlafonds}"/>
         <td th:text="${devis.prixMetreCarrePrestationPlafonds} + ' €'"/>
         <td th:text="${devis.surfacePlafonds}"/>
         <td th:text="${devis.prixTotalPrestationPlafonds} + ' €'"/>
-        <td th:text="${devis.qualitePrestationBoiseries}"/>
+        <td th:text="${devis.qualitePrestationBoiseries.labelQualiteBois}"/>
         <td th:text="${devis.prixMetreCarrePrestationBoiseries} + ' €'"/>
         <td th:text="${devis.surfaceBoiseries}"/>
         <td th:text="${devis.prixTotalPrestationBoiseries} + ' €'"/>

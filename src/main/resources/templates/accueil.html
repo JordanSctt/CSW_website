@@ -50,7 +50,9 @@
 				il vous suffit de connaitre les surfaces des ouvrages que vous souhaitez réaliser, choisissez ensuite le type de prestation que vous souhaitez
 				pour vos travaux, puis génerez votre devis. 
 			</p>
+			<!-- 
 			<a href="/devis/new" class="button">Créer mon estimation de devis en ligne</a>
+			-->
 		</div>
 		</br>
 		<div class="collapse" id="collapseBar">
@@ -77,6 +79,7 @@
 							</div>
 						
 							<!-- MURS -->
+							</br>
 							<h2 class="h3 mb-3 font-weight-normal">- Prestation murs -</h2>
 						
 							<div class="form-check form-switch">
@@ -90,7 +93,7 @@
 							</br>
 							<div class="form-label-group">
 								<select class="form-select" aria-label="Default select example" name="qualitePrestationMurs" >
-									<option selected value="PEINTURE_DE_PROPRETE">Sélectionner une qualitée de prestation pour vos murs</option>
+									<option selected value="NO_CHOICE">Sélectionner une qualitée de prestation pour vos murs</option>
 									<option value="PEINTURE_DE_PROPRETE">Simple peinture de propreté en une couche d'application</option>
 									<option value="MISE_EN_PEINTURE">Mise en peinture en trois couches d'application</option>
 									<option value="REPRISE_ET_MISE_EN_PEINTURE">Reprise d'enduit localisée(s) et mise en peinture en trois couches d'application</option>
@@ -103,11 +106,12 @@
 							</div>
 						
 							<!-- PLAFONDS -->
+							</br>
 							<h2 class="h3 mb-3 font-weight-normal">- Prestation plafonds -</h2>
 						
 							<div class="form-label-group">
 								<select class="form-select" aria-label="Default select example" name="qualitePrestationPlafonds" >
-									<option selected value="PEINTURE_DE_PROPRETE">Sélectionner une qualitée de prestation pour vos plafonds</option>
+									<option selected value="NO_CHOICE">Sélectionner une qualitée de prestation pour vos plafonds</option>
 									<option value="PEINTURE_DE_PROPRETE">Simple peinture de propreté en une couche d'application</option>
 									<option value="MISE_EN_PEINTURE">Mise en peinture en trois couches d'application</option>
 									<option value="REPRISE_ET_MISE_EN_PEINTURE">Reprise d'enduit localisée(s) et mise en peinture en trois couches d'application</option>
@@ -120,11 +124,12 @@
 							</div>
 						
 							<!-- BOISERIES -->
+							</br>
 							<h2 class="h3 mb-3 font-weight-normal">- Prestation boiseries -</h2>
 						
 							<div class="form-label-group">
 								<select class="form-select" aria-label="Default select example" name="qualitePrestationBoiseries" >
-									<option selected value="PEINTURE_DE_PROPRETE">Sélectionner une qualitée de prestation pour vos boiseries</option>
+									<option selected value="NO_CHOICE">Sélectionner une qualitée de prestation pour vos boiseries</option>
 									<option value="PEINTURE_DE_PROPRETE">Simple peinture de propreté en une couche d'application</option>
 									<option value="PONCAGE_ET_PEINTURE_DE_PROPRETE">Ponçage du support, reprise(s) sintobois et peinture en une couche d'application</option>
 									<option value="PONCAGE_ET_MISE_EN_PEINTURE">Ponçage du support, reprise(s) sintobois et peinture en deux couche d'application</option>
@@ -135,7 +140,7 @@
 								<input type="number" id="inputSurfaceBoiseries" class="form-control" name="surfaceBoiseries" value="0"/>
 							</div>
 							</br>
-							<button class="btn btn-lg btn-primary btn-block" type="submit">Valider</button>
+							<button class="btn btn-lg btn-secondary" type="submit">Valider</button>
 						</form>
 						<br/>    
 					</div>
@@ -143,8 +148,8 @@
 			</div>
 		</div>
 		<div class="navbar box-shadow bg-secondary text-white">
-			<div class="container d-flex justify-content-between">
-					<strong>Créer mon estimation de devis en ligne</strong>                   
+			<div class="container d-flex justify-content-between text-white">
+					<strong class=" text-white">Créer mon estimation de devis en ligne</strong>                   
 				<button class="navbar-toggler-white" type="button" data-toggle="collapse" data-target="#collapseBar"
 						aria-controls="collapseBar" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
